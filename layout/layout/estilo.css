@@ -1,0 +1,59 @@
+*{
+	box-sizing: border-box;
+}
+.header {
+	background-color: darkred;
+	text-align: center;
+	padding: 30px;
+}
+.header h1 {
+	color: white;
+	font-size: 60px;
+}
+.menu {
+	background-color: black;
+	overflow: hidden;
+}
+.menu a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 16px;
+}
+.menu a:hover{
+	 color: black;
+	 background-color: white;
+}
+.izquierda{
+	float: left;
+	width: 70%;
+}
+.item{
+	background-color: white;
+	padding: 20px;
+	margin-top: 20px;
+}
+.imagen{
+	width: 200px;
+}
+body{
+	background-color: #e5e5e5;
+	padding: 10px;
+}
+.derecha{
+	float: left;
+	width: 30%;
+	padding-left: 20px;
+}
+.contenido:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.footer{
+	padding: 20px;
+	text-align: center;
+	background-color: #f5f5dc;
+	margin-top: 20px;
+}
