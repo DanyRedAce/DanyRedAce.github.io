@@ -1,0 +1,294 @@
+$(document).ready(function(){if(window.location.search.indexOf("hideChrome")>0||window.location.href.indexOf("nintendo-switch")>0){var d=document.cookie.split(";");
+for(var c=0;
+c<d.length;
+c++){var b=d[c];
+var e=b.indexOf("=");
+var a=e>-1?b.substr(0,e):b;
+if(a){document.cookie=a+"=;  domain="+location.hostname+"; path=/; expires="+new Date(0).toUTCString();
+document.cookie=a+"=;   path=/; expires="+new Date(0).toUTCString()
+}}if(!document.__defineGetter__){Object.defineProperty(document,"cookie",{get:function(){return""
+},set:function(){return true
+}})
+}else{document.__defineGetter__("cookie",function(){return""
+});
+document.__defineSetter__("cookie",function(){})
+}}$("#currentYear").text(new Date().getFullYear());
+$("#language-switcher a").click(function(g){g.preventDefault();
+var f=$(g.target);
+createCookie("language_url",f.attr("href"));
+window.location=f.attr("href")
+});
+injectOptimizely()
+});
+function createCookie(a,b){if(window.location.search.indexOf("hideChrome")>0){return
+}if(typeof(mscc)==="undefined"||mscc.hasConsent()){createCookieOnConsent(a,b)
+}else{mscc.on("consent",createCookieOnConsent(a,b))
+}}function createCookieOnConsent(a,b){if(typeof(mscc)==="undefined"||mscc.hasConsent()){document.cookie=a+"="+b+"; path=/"
+}}function getCookie(d){var b=d+"=";
+var a=document.cookie.split(";");
+for(var e=0;
+e<a.length;
+e++){var f=a[e];
+while(f.charAt(0)==" "){f=f.substring(1)
+}if(f.indexOf(b)==0){return f.substring(b.length,f.length)
+}}return""
+}function injectOptimizely(){if(window.location.search.indexOf("hideChrome")>0||window.location.href.indexOf("nintendo-switch")>0){return
+}if(typeof(mscc)==="undefined"||mscc.hasConsent()){var c=document.createElement("script");
+c.type="text/javascript";
+c.src="https://cdn.optimizely.com/js/6954420415.js";
+document.getElementsByTagName("head")[0].appendChild(c);
+var b=document.createElement("script");
+b.type="text/javascript";
+b.src="//az725175.vo.msecnd.net/scripts/jsll-4.js";
+document.getElementsByTagName("head")[0].appendChild(b);
+var a=document.createElement("script");
+a.type="text/javascript";
+a.src="//assets.adobedtm.com/launch-ENd2ed3ced5f384e6a8a44d223a52d512d.min.js";
+a.async=true;
+document.getElementsByTagName("head")[0].appendChild(a)
+}else{mscc.on("consent",injectOptimizely())
+}}var elements=$(".home-hero .hero-outer-wrapper");
+var parts=window.location.pathname.split("/"),result;
+if(window.location.pathname.indexOf(".html")>0){result=parts[parts.length-1]
+}else{result=parts[parts.length-2]
+}$(document).ready(function(){$(".desktops,.consoles,.devices").on("click","li",function(b){var a=$(this).attr("data-bg-image");
+if(a){$(".device-selection__edition-details").css("background-image","url("+a+")")
+}})
+});
+$(function(){if($(".js-scroll-to-top-button").length==0){return
+}$(".js-scroll-to-top-button").css("transform","translate3d(68px, 0, 0)")
+});
+$(document).ready(function(){$(".aem-GridColumn.text .end-with-block").last().find("p").last().addClass("what-block")
+});
+var map,searchManager,apiKey,center,centerLat,centerLon;
+$(document).ready(function(){if($(".event-handrow").length){apiKey=$("#bingapikey").val();
+center=$("#bingmapcenter").val();
+centerLat=center.split("|")[0];
+centerLon=center.split("|")[1];
+var a=document.createElement("script");
+a.type="text/javascript";
+a.src="https://www.bing.com/api/maps/mapcontrol?callback=loadMapScenario";
+document.getElementById("bingMap").appendChild(a)
+}});
+function loadMapScenario(){map=new Microsoft.Maps.Map(document.getElementById("bingMap"),{credentials:apiKey});
+setView();
+Microsoft.Maps.Events.addHandler(map,"click",getLatlng)
+}function setView(){map.setView({center:new Microsoft.Maps.Location(centerLat,centerLon),zoom:10})
+}function reverseGeocode(a){if(!searchManager){Microsoft.Maps.loadModule("Microsoft.Maps.Search",function(){searchManager=new Microsoft.Maps.Search.SearchManager(map);
+reverseGeocode(a)
+})
+}else{var b={location:a,callback:function(c){$(".binglat").val(c.location.latitude);
+$(".binglong").val(c.location.longitude);
+$(".bingCountryName").val(c.address.countryRegion);
+$(".bingStreet").val(c.address.addressLine);
+$(".bingStreet2").val(c.address.district);
+$(".bingPostalCode").val(c.address.postalCode);
+$(".bingPostalTown").val(c.address.district);
+$(".bingState").val(c.address.adminDistrict)
+},errorCallback:function(c){alert(Granite.I18n.get("reversegeocodefail"))
+}};
+searchManager.reverseGeocode(b)
+}}function getLatlng(f){for(var d=map.entities.getLength()-1;
+d>=0;
+d--){var h=map.entities.get(d);
+if(h instanceof Microsoft.Maps.Pushpin){map.entities.removeAt(d)
+}}if(f.targetType=="map"){var a=new Microsoft.Maps.Point(f.getX(),f.getY());
+var g=f.target.tryPixelToLocation(a);
+var b=new Microsoft.Maps.Location(g.latitude,g.longitude);
+var c=new Microsoft.Maps.Pushpin(b,{draggable:false});
+map.entities.push(c)
+}reverseGeocode(b)
+}function clearSearchBox(){map.entities.clear();
+$("#searchTbx").val("");
+setView();
+var a=new Microsoft.Maps.Location(centerLat,centerLon);
+reverseGeocode(a)
+}function search(){if(!searchManager){Microsoft.Maps.loadModule("Microsoft.Maps.Search",function(){searchManager=new Microsoft.Maps.Search.SearchManager(map);
+search()
+})
+}else{map.entities.clear();
+var a=document.getElementById("searchTbx").value;
+geocodeQuery(a)
+}}function searchWithZip(b){if(!searchManager){Microsoft.Maps.loadModule("Microsoft.Maps.Search",function(){searchManager=new Microsoft.Maps.Search.SearchManager(map);
+searchWithZip(b)
+})
+}else{var a={bounds:map.getBounds(),where:b,callback:function(d,c){$(".binglat").val(d.results[0].location.latitude);
+$(".binglong").val(d.results[0].location.longitude);
+$(".bingCountryName").val(d.results[0].address.countryRegion);
+$(".bingState").val(d.results[0].address.adminDistrict)
+}};
+searchManager.geocode(a)
+}}function geocodeQuery(b){var a={where:b,callback:function(e){if(e&&e.results&&e.results.length>0){var c,g=[],f=[];
+c=new Microsoft.Maps.Pushpin(e.results[0].location,{draggable:false});
+g.push(c);
+map.entities.push(g);
+var d;
+d=e.results[0].bestView;
+map.setView({bounds:d})
+}reverseGeocode(e.results[0].location)
+},errorCallback:function(c){alert(Granite.I18n.get("validlocation"))
+}};
+searchManager.geocode(a)
+}var stopProp=false;
+$(function(){var a=$("#event-details-form");
+var b=$(".binglat").val();
+var c=$(".binglong").val();
+a.submit(function(l){if(!stopProp){var f=$(".startDate").val();
+var e=$(".startTime").val();
+var g=$(".endDate").val();
+var h=$(".endTime").val();
+var i=$(".timezone").val();
+var k=i.split("GMT")[1];
+var j=f+"T"+e+k;
+var d=g+"T"+h+k;
+$("#utcEnd").val(d);
+$("#utcStart").val(j);
+if($("#showLocation").is(":checked")){$("#showLocationHidden").attr("disabled",true)
+}if($("#isPaid").is(":checked")){$("#isPaidHidden").attr("disabled",true)
+}if(!b||!c){searchWithZip($(".bingPostalCode").val())
+}$.ajax({type:a.attr("method"),url:a.attr("action"),data:a.serialize(),success:function(m){$(".alert-success").fadeIn(2000).fadeOut(2000)
+},error:function(){}});
+l.preventDefault()
+}else{l.preventDefault();
+l.stopPropagation()
+}})
+});
+$(".startDate,.endDate").change(function(){var c=new Date($(".startDate").val());
+var b=new Date($(".endDate").val());
+var d=b.getTime()-c.getTime();
+var a=Math.ceil(d/(1000*3600*24));
+if(a<0){$("#dateError").removeClass("hide");
+stopProp=true
+}else{$("#dateError").addClass("hide");
+stopProp=false
+}});
+$(document).ready(function(){if($(".event-handrow").length){if($("#showLoc").val()=="Yes"){$("#showLocation").attr("checked","checked")
+}if($("#isPaidFormVal").val()=="Yes"){$("#isPaid").attr("checked","checked")
+}$(".bingPostalCode").blur(function(){searchWithZip($(".bingPostalCode").val())
+})
+}});
+jQuery((function(d,c){var b,i,g=1,e=5,f,a=true;
+function h(k){if(a){d(".events-container").find(".event").remove()
+}var j=Object.keys(k)[0];
+if(j<=(g*e)){d(".show-more-button").hide()
+}else{d(".show-more-button").show()
+}d.each(k[j],function(l,o){var p,m,n;
+Handlebars.registerHelper("tickets",function(){return Granite.I18n.get("TICKETS")
+});
+p=d("#event-item-template").html();
+m=Handlebars.compile(p);
+n=m(o);
+d(".events-container").append(n)
+})
+}b={fetchEvents:function(k){f=k;
+var n,m;
+if(k){n=k.coords.latitude;
+m=k.coords.longitude
+}var j=d("#eventlistingpage").val();
+var l=d("#eventlistingtag").val();
+d.ajax({url:j+"/jcr:content.fetchevents.json",type:"get",data:{latitude:n,longitude:m,eventListingTag:l,page:g,count:e},success:function(o){if(g>1){a=false
+}else{a=true
+}h(o)
+},error:function(o){console.log("No events present")
+}})
+}};
+d(document).ready(function(){if(d(".minecon-events").length){b.fetchEvents()
+}});
+d("#position-sort-btn").click(function(){if(navigator.geolocation){g=1;
+navigator.geolocation.getCurrentPosition(b.fetchEvents)
+}});
+d(".show-more-button").click(function(){g=g+1;
+if(f){b.fetchEvents(f)
+}else{b.fetchEvents()
+}})
+}(jQuery,Handlebars)));
+$(document).ready(function(){$(".sub-heroes-wrapper").find("a").last().removeClass("col-sm-6")
+});
+$(document).ready(function(){if($(".salescounter").length==0){return
+}const a="/content/minecraft-net/_jcr_content.salescounter.json";
+var b=function(){const d=function(){var e={metricKeys:["item_sold_minecraft","prepaid_card_redeemed_minecraft"]};
+return e
+};
+const c=JSON.stringify(d());
+$.get(a,{salescounterparams:c},function(e){if(e.error!=null){console.error(e.errorMessage)
+}else{if(e.total!=null){$(".counter").html(e.total)
+}}})
+};
+b()
+});
+$(document).ready(function(){if($("#netease-promotion-modal").length==0){return
+}if($("#netease-promotion-modal").closest(".geo-loc-wrapper-edit-content").length>0){$("#netease-promotion-modal").remove();
+return
+}if($("#netease-promotion-modal").parents("body").hasClass("modal-open")){$("#netease-promotion-modal").parents("body").removeClass("modal-open")
+}if(getCookie("ne-p-shown").length==0){$("#netease-promotion-modal").parents("body").addClass("modal-open");
+$("#netease-promotion-modal").addClass("show")
+}else{$("#netease-promotion-modal").removeClass("show")
+}$("#netease-promotion-modal").find("a.btn.btn-primary").click(function(b){b.preventDefault();
+createCookie("ne-p-shown",1);
+a($(this).data("action"),$(this).attr("href"))
+});
+$("#netease-promotion-modal").find("button.btn.btn-link").click(function(b){createCookie("ne-p-shown",1);
+a($(this).data("action"),"")
+});
+var a=function(c,b){$("#netease-promotion-modal").parents("body").removeClass("modal-open");
+if(c=="leave"){window.location.href=b
+}else{if(c=="stay"){$("#netease-promotion-modal").attr("class","modal fade in")
+}}}
+});
+$(document).ready(function(){if(window.location.search.includes("hideChrome")){$("main").removeClass("site-body");
+$(".hide-chrome-display-content a").each(function(){var a=this.getAttribute("href");
+var b=" <i> &nbsp; "+a+"</i>";
+$(b).insertAfter($(this));
+$(this).removeAttr("href")
+})
+}$(".hide-chrome-display-content").show()
+});
+$(document).ready(function(){$(".card .downloadlink").each(function(e){var d=$(this);
+var c=d.attr("href");
+var a=d.closest(".card").find("label:first");
+var b=a.find(".form-check-input");
+d.click(function(f){if(b.length>0&&!b.prop("checked")){f.preventDefault();
+f.stopPropagation();
+a.addClass("animation-bounce--down animation-run-infinite mark")
+}});
+a.click(function(f){a.removeClass("animation-bounce--down animation-run-infinite mark");
+if(b.prop("checked")==true){d.removeClass("btn-disabled-outline").addClass("btn-primary");
+d.prop("href",c)
+}else{d.addClass("btn-disabled-outline").removeClass("btn-primary");
+d.prop("href","#")
+}})
+})
+});
+$(document).on("change",".bedrock-server-card .check-to-proceed input[type=checkbox]",function(){var d=$(this);
+var c=d.closest(".check-to-proceed");
+var a=c.find("a.btn");
+var b=d.closest("label.form-check-label");
+if(d.is(":checked")){a.removeClass("btn-disabled-outline").addClass("btn-primary");
+b.removeClass("animation-bounce--down animation-run-infinite mark")
+}else{a.removeClass("btn-primary").addClass("btn-disabled-outline")
+}});
+$(document).on("click",".bedrock-server-card .check-to-proceed a.btn",function(){var a=$(this);
+var d=a.closest(".check-to-proceed");
+var c=d.find("input[type=checkbox]");
+var b=c.closest("label.form-check-label");
+if(!c.is(":checked")){b.addClass("animation-bounce--down animation-run-infinite mark");
+return false
+}});
+$(document).on("mouseover",".bedrock-server-card .check-to-proceed label.form-check-label",function(){$(this).removeClass("animation-bounce--down animation-run-infinite")
+});
+var platformDownload=$(".platform-download");
+var info=deviceInfo;
+if(info&&platformDownload.length>0){var selector="div.default-platform-text";
+var downloadPlatform=info.downloadPlatform;
+if(downloadPlatform&&downloadPlatform!=="none"){selector="div.container-"+info.downloadPlatform
+}platformDownload.find(selector).removeAttr("hidden")
+}$(document).ready(function(){var f=$("html")[0].lang;
+var e=$(".attribution__details .pubDate");
+var d=e.attr("date-value");
+if(d){d=d.replace("+","");
+var c=new Date(d);
+var b={day:"2-digit",month:"2-digit",year:"numeric"};
+var a=c.toLocaleDateString(f,b);
+if(f.indexOf("ko")>=0){a=a.replace(". ","-").replace(". ","-")
+}e.html(a)
+}});

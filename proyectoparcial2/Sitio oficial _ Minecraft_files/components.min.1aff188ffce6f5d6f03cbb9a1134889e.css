@@ -1,0 +1,294 @@
+.strikethrough{text-decoration:line-through}
+.parsysauthorspacing{margin-top:110px}
+@keyframes bounce-down{0.1%,5%,35%,60%,100%{transform:translateY(0)}
+25%{transform:translateY(-8px)}
+45%{transform:translateY(-4px)}
+!important}
+@media(min-width:576px){.card-group>.card{flex:1 0 .1%}
+}
+.what-block::after{content:'';background:url(main/resources/theme-assets/svg/icons/what-block.svg) no-repeat;display:inline-block;margin-left:.5rem;margin-bottom:2px;vertical-align:text-bottom;width:1rem;height:1rem}
+.hide{display:none !important}
+.show{display:block !important}
+#cardListText{display:none}
+#cardListEmptyText{display:none}
+.experiencefragment .xf-content-height{min-height:auto}
+.rte-text-orange{color:#d4441a}
+.cq-Editable-dom--container{padding-top:0rem !important}
+.profile-widget>.nav-item.open .dropdown-menu-right{display:block}
+.profile-widget>.nav-item a.dropdown-toggle{cursor:pointer}
+.btn-disabled-outline,.btn-disabled-outline:hover{cursor:default !important;background-color:transparent;color:#d1cfce;box-shadow:0 0 0 4px currentColor inset}
+.pre{margin:1em 0;display:block;font-size:87.5%;color:#1d1e1e;margin-top:0;margin-bottom:1rem;overflow:auto;font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;white-space:pre}
+.price-button{padding-left:5px}
+.empty-description{min-height:100px}
+.bg-minecon-intro{background-position:center;background-size:cover;background-image:url("main/resources/img/minecon/minecon-bg.jpg")}
+@media(max-width:767.98px){.bg-minecon-intro .h1.font-mc-ten{font-size:1.75rem}
+}
+.blue-tile-gradient{background-image:linear-gradient(180deg,#043069,#1eb3f2)}
+.bg-dungeons-section{background-color:#050a0f}
+#parties{padding-top:150px}
+@media(min-width:992px){#parties{padding-top:100px}
+}
+.minecon-earth-banner-logo{background-image:url("main/resources/img/minecon/minecon-party-logo-background.png");background-repeat:no-repeat;background-size:contain;background-position:center;transform:scale(4) translateY(-2px)}
+#minecon-party-logo-background{background-image:url("main/resources/img/minecon/minecon-party-logo-background.png");background-repeat:no-repeat;background-size:contain;background-position:center;transform:scale(2.75) translateY(-10px);z-index:initial}
+@media(max-width:991.98px){#minecon-party-logo-background{transform:scale(2.2) translateY(-36px)}
+}
+.hosts{display:-ms-grid;display:grid;grid-gap:1rem}
+@media(min-width:1200px){.hosts{-ms-grid-columns:(minmax(min-content,273px)) [4];grid-template-columns:repeat(4,minmax(min-content,273px));-ms-grid-rows:(minmax(min-content,273px)) [4];grid-template-rows:repeat(4,minmax(min-content,273px))}
+.hosts .video-tile__play-btn{top:-273px}
+.hosts>div:nth-child(1){-ms-grid-column-span:4;grid-column-end:span 4;-ms-grid-row-span:2;grid-row-end:span 2}
+.hosts>div:nth-child(2){-ms-grid-row-span:2;grid-row-end:span 2}
+.hosts>div:nth-child(4){-ms-grid-column:2;grid-column:2;-ms-grid-row:4;grid-row:4}
+.hosts>div:nth-child(5),.hosts>div:nth-child(6){-ms-grid-row-span:2;grid-row-end:span 2}
+}
+@media(min-width:992px) and (max-width:1199.98px){.hosts{-ms-grid-columns:(273px) [3];grid-template-columns:repeat(3,273px);-ms-grid-rows:calc($tile-size-max * 1.5),273px,273px,273px;grid-template-rows:calc($tile-size-max * 1.5),273px,273px,273px}
+.hosts .video-tile__play-btn{top:calc(273px / 1.5 * -1)}
+.hosts>div:nth-child(1){-ms-grid-column-span:3;grid-column-end:span 3;-ms-grid-row:1;grid-row:1}
+.hosts>div:nth-child(2),.hosts>div:nth-child(5),.hosts>div:nth-child(6){-ms-grid-row:span 2;grid-row:span 2}
+.hosts>div:nth-child(4){-ms-grid-row:4;grid-row:4}
+}
+@media(min-width:768px) and (max-width:991.98px){.hosts{-ms-grid-columns:(273px) [2];grid-template-columns:repeat(2,273px);-ms-grid-rows:(273px) [5];grid-template-rows:repeat(5,273px)}
+.hosts .video-tile__play-btn{top:calc(273px / 2 * -1)}
+.hosts>div:nth-child(1){-ms-grid-column-span:2;grid-column-end:span 2;-ms-grid-row:1;grid-row:1}
+.hosts>div:nth-child(2){-ms-grid-row-span:2;grid-row-end:span 2}
+.hosts>div:nth-child(4){-ms-grid-row:5;grid-row:5;-ms-grid-column:2;grid-column:2}
+.hosts>div:nth-child(5),.hosts>div:nth-child(6){-ms-grid-row:span 2;grid-row:span 2}
+}
+@media(max-width:767.98px){.hosts .tile{height:calc(90vw / 4);width:90vw}
+.hosts .tile img{width:calc(90vw / 4)}
+.hosts .tile .tile-caption__text{opacity:1}
+.hosts .tile .sliding-content{width:calc(90vw * 0.75);height:calc(90vw / 4);right:0;left:auto}
+.hosts .tile a:hover .sliding-content__body{transform:none}
+.hosts .tile .sliding-content__body{transform:none;height:calc(90vw / 4)}
+.hosts .tile .tile-caption{height:100%}
+.hosts .tile .tile-caption h3{margin:0 0 .5rem}
+}
+@media(max-width:500px){.hosts .tile-caption{padding:.5rem}
+.hosts .tile-caption__title{margin:0}
+.hosts .tile-caption__text{display:none}
+.hosts h3{margin:0}
+.hosts .tile{font-size:1rem}
+}
+.hosts .tile .tile__image{height:100%}
+.hosts .tile[data-type='takeover-trigger']{cursor:pointer}
+.hosts .tile:focus .tile__image,.hosts .tile:hover .tile__image{transform:scale(1.05)}
+@supports not(display:grid){.hosts{text-align:center}
+.hosts .tile{display:inline-block;margin:8px;width:270px;height:270px}
+}
+@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.hosts{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:center;justify-content:center}
+.hosts .tile{width:275px;height:275px;margin:1rem !important}
+.hosts>div:nth-child(1){background-color:#22a3cd}
+}
+.minecon .show-takeover{height:350px;display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}
+.what-is-minecraft h1{font-size:24px}
+.what-is-minecraft .what-is-minecraft__hero{background:url("main/resources/img/what-is-minecraft/stars.png"),linear-gradient(#2e1a71,#3b2191)}
+@media(min-width:768px){.what-is-minecraft .what-is-minecraft__hero{background:url("main/resources/img/what-is-minecraft/steve-alex.png") no-repeat bottom right,url("main/resources/img/what-is-minecraft/purple-mountains.png") no-repeat bottom left,url("main/resources/img/what-is-minecraft/stars.png"),linear-gradient(#2e1a71,#3b2191);background-size:33vw,100vw,auto,auto;min-height:calc(100vh - (87px + 27px))}
+}
+@media(min-width:992px){.what-is-minecraft .what-is-minecraft__hero{min-height:calc(100vh - (112px + 27px))}
+}
+@media only screen and (min-width:2880px){.what-is-minecraft .what-is-minecraft__hero{min-height:unset;height:1800px}
+}
+.what-is-minecraft .what-is-minecraft__hero>.container{min-height:500px}
+.what-is-minecraft .half-page-img-col{background-size:cover;background-position:center}
+.what-is-minecraft .minecraft-marketplace .half-page-img-col{background-repeat:no-repeat}
+@media(min-width:768px){.what-is-minecraft .minecraft-marketplace .half-page-img-col{background-position-x:right;min-height:800px}
+}
+@media(max-width:767.98px){.half-page-img-col{height:30vh}
+}
+.need-help{background-size:cover}
+@media(min-width:768px){.need-help{background-position:right center}
+}
+.media-block__text-column--right{padding-left:30px}
+@media(max-width:767.98px){.media-block__text-column{padding-left:0;max-width:none;text-align:center}
+.media-block__text-column--right{padding-left:0}
+}
+.media-block__text-column{max-width:470px}
+.bedrock-server{background-color:#f1edec !important;padding:.25rem !important;color:#7824c5 !important;font-size:87.5%;word-break:break-word;font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+.btn-disabled-outline{cursor:default !important;background-color:transparent;color:#d1cfce;box-shadow:0 0 0 4px currentColor inset}
+.btn-disabled-outline::before{box-shadow:none}
+.btn-disabled-outline::after{box-shadow:none}
+.btn-disabled-outline:hover,.btn-disabled-outline:focus,.btn-disabled-outline:active{color:#d1cfce !important;box-shadow:0 0 0 4px currentColor inset}
+.btn-disabled-outline:hover::before,.btn-disabled-outline:focus::before,.btn-disabled-outline:active::before{background-color:transparent !important;box-shadow:none}
+.hide-chrome-display-content{display:none}
+.break-word{overflow-wrap:break-word}
+.code{color:#7824c5}
+.price-button{padding-left:5px}
+.empty-description{min-height:100px}
+.bg-minecon-intro{background-position:center;background-size:cover;background-image:url("main/resources/img/minecon/minecon-bg.jpg")}
+@media(max-width:767.98px){.bg-minecon-intro .h1.font-mc-ten{font-size:1.75rem}
+}
+.blue-tile-gradient{background-image:linear-gradient(180deg,#043069,#1eb3f2)}
+.bg-dungeons-section{background-color:#050a0f}
+#parties{padding-top:150px}
+@media(min-width:992px){#parties{padding-top:100px}
+}
+.minecon-earth-banner-logo{background-image:url("main/resources/img/minecon/minecon-party-logo-background.png");background-repeat:no-repeat;background-size:contain;background-position:center;transform:scale(4) translateY(-2px)}
+#minecon-party-logo-background{background-image:url("main/resources/img/minecon/minecon-party-logo-background.png");background-repeat:no-repeat;background-size:contain;background-position:center;transform:scale(2.75) translateY(-10px);z-index:initial}
+@media(max-width:991.98px){#minecon-party-logo-background{transform:scale(2.2) translateY(-36px)}
+}
+.hosts{display:-ms-grid;display:grid;grid-gap:1rem}
+@media(min-width:1200px){.hosts{-ms-grid-columns:(minmax(min-content,273px))[4];grid-template-columns:repeat(4,minmax(min-content,273px));-ms-grid-rows:(minmax(min-content,273px))[4];grid-template-rows:repeat(4,minmax(min-content,273px))}
+.hosts .video-tile__play-btn{top:-273px}
+.hosts>div:nth-child(1){-ms-grid-column-span:4;grid-column-end:span 4;-ms-grid-row-span:2;grid-row-end:span 2}
+.hosts>div:nth-child(2){-ms-grid-row-span:2;grid-row-end:span 2}
+.hosts>div:nth-child(4){-ms-grid-column:2;grid-column:2;-ms-grid-row:4;grid-row:4}
+.hosts>div:nth-child(5),.hosts>div:nth-child(6){-ms-grid-row-span:2;grid-row-end:span 2}
+}
+@media(min-width:992px) and (max-width:1199.98px){.hosts{-ms-grid-columns:(273px)[3];grid-template-columns:repeat(3,273px);-ms-grid-rows:calc($tile-size-max * 1.5),273px,273px,273px;grid-template-rows:calc($tile-size-max * 1.5),273px,273px,273px}
+.hosts .video-tile__play-btn{top:calc(273px / 1.5 * -1)}
+.hosts>div:nth-child(1){-ms-grid-column-span:3;grid-column-end:span 3;-ms-grid-row:1;grid-row:1}
+.hosts>div:nth-child(2),.hosts>div:nth-child(5),.hosts>div:nth-child(6){-ms-grid-row:span 2;grid-row:span 2}
+.hosts>div:nth-child(4){-ms-grid-row:4;grid-row:4}
+}
+@media(min-width:768px) and (max-width:991.98px){.hosts{-ms-grid-columns:(273px)[2];grid-template-columns:repeat(2,273px);-ms-grid-rows:(273px)[5];grid-template-rows:repeat(5,273px)}
+.hosts .video-tile__play-btn{top:calc(273px / 2 * -1)}
+.hosts>div:nth-child(1){-ms-grid-column-span:2;grid-column-end:span 2;-ms-grid-row:1;grid-row:1}
+.hosts>div:nth-child(2){-ms-grid-row-span:2;grid-row-end:span 2}
+.hosts>div:nth-child(4){-ms-grid-row:5;grid-row:5;-ms-grid-column:2;grid-column:2}
+.hosts>div:nth-child(5),.hosts>div:nth-child(6){-ms-grid-row:span 2;grid-row:span 2}
+}
+@media(max-width:767.98px){.hosts .tile{height:calc(90vw / 4);width:90vw}
+.hosts .tile img{width:calc(90vw / 4)}
+.hosts .tile .tile-caption__text{opacity:1}
+.hosts .tile .sliding-content{width:calc(90vw * 0.75);height:calc(90vw / 4);right:0;left:auto}
+.hosts .tile a:hover .sliding-content__body{transform:none}
+.hosts .tile .sliding-content__body{transform:none;height:calc(90vw / 4)}
+.hosts .tile .tile-caption{height:100%}
+.hosts .tile .tile-caption h3{margin:0 0 .5rem}
+}
+@media(max-width:500px){.hosts .tile-caption{padding:.5rem}
+.hosts .tile-caption__title{margin:0}
+.hosts .tile-caption__text{display:none}
+.hosts h3{margin:0}
+.hosts .tile{font-size:1rem}
+}
+.hosts .tile .tile__image{height:100%}
+.hosts .tile[data-type='takeover-trigger']{cursor:pointer}
+.hosts .tile:focus .tile__image,.hosts .tile:hover .tile__image{transform:scale(1.05)}
+@supports not(display:grid){.hosts{text-align:center}
+.hosts .tile{display:inline-block;margin:8px;width:270px;height:270px}
+}
+@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.hosts{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:center;justify-content:center}
+.hosts .tile{width:275px;height:275px;margin:1rem !important}
+.hosts>div:nth-child(1){background-color:#22a3cd}
+}
+.minecon .show-takeover{height:350px;display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}
+.what-is-minecraft h1{font-size:24px}
+.what-is-minecraft .what-is-minecraft__hero{background:url("main/resources/img/what-is-minecraft/stars.png"),linear-gradient(#2e1a71,#3b2191)}
+@media(min-width:768px){.what-is-minecraft .what-is-minecraft__hero{background:url("main/resources/img/what-is-minecraft/steve-alex.png") no-repeat bottom right,url("main/resources/img/what-is-minecraft/purple-mountains.png") no-repeat bottom left,url("main/resources/img/what-is-minecraft/stars.png"),linear-gradient(#2e1a71,#3b2191);background-size:33vw,100vw,auto,auto;min-height:calc(100vh - (87px + 27px))}
+}
+@media(min-width:992px){.what-is-minecraft .what-is-minecraft__hero{min-height:calc(100vh - (112px + 27px))}
+}
+@media only screen and (min-width:2880px){.what-is-minecraft .what-is-minecraft__hero{min-height:unset;height:1800px}
+}
+.what-is-minecraft .what-is-minecraft__hero>.container{min-height:500px}
+.what-is-minecraft .half-page-img-col{background-size:cover;background-position:center}
+.what-is-minecraft .minecraft-marketplace .half-page-img-col{background-repeat:no-repeat}
+@media(min-width:768px){.what-is-minecraft .minecraft-marketplace .half-page-img-col{background-position-x:right;min-height:800px}
+}
+@media(max-width:767.98px){.half-page-img-col{height:30vh}
+}
+@media(min-width:1200px){#how-to-play .half-page-img-col{min-width:670px !important;min-height:760px !important}
+#how-to-play #get-started .half-page-img-col{min-width:670px !important;min-height:630px !important}
+#how-to-play #play-with-friends .half-page-img-col{min-width:670px !important;min-height:880px !important}
+#how-to-play #minecraft-marketplace .half-page-img-col{background-position-x:right;min-height:800px !important}
+}
+.need-help{background-size:cover}
+@media(min-width:768px){.need-help{background-position:right center}
+}
+.media-block__text-column--right{padding-left:30px}
+@media(max-width:767.98px){.media-block__text-column{padding-left:0;max-width:none;text-align:center}
+.media-block__text-column--right{padding-left:0}
+}
+.media-block__text-column{max-width:470px}
+.bedrock-server{background-color:#f1edec !important;padding:.25rem !important;color:#7824c5 !important;font-size:87.5%;word-break:break-word;font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+.btn-disabled-outline{cursor:default !important;background-color:transparent;color:#d1cfce;box-shadow:0 0 0 4px currentColor inset}
+.btn-disabled-outline::before{box-shadow:none}
+.btn-disabled-outline::after{box-shadow:none}
+.btn-disabled-outline:hover,.btn-disabled-outline:focus,.btn-disabled-outline:active{color:#d1cfce !important;box-shadow:0 0 0 4px currentColor inset}
+.btn-disabled-outline:hover::before,.btn-disabled-outline:focus::before,.btn-disabled-outline:active::before{background-color:transparent !important;box-shadow:none}
+.hide-chrome-display-content{display:none}
+.break-word{overflow-wrap:break-word}
+.minecraft-version code{color:#7824c5 !important}
+.article-body p:last-child{margin-bottom:0}
+.article-body{padding-bottom:0}
+.article-paragraph{margin-top:30px;margin-bottom:30px}
+.media-block-arrow-link{color:currentColor;font-weight:bold;position:relative;text-transform:uppercase;text-align:inherit;margin-left:1.5em;display:block}
+.media-block-arrow-link:focus,.media-block-arrow-link:hover,.media-block-arrow-link:active{color:currentColor}
+.media-block-arrow-link .svg-icon{position:absolute;top:2px;left:-1.5em}
+.icon-menu-hamburger--close{background-image:url("main/resources/img/svg/menu-hamburger--close.svg");background-position:center right}
+@media(max-width:698px){.realms-cta-container>.row{margin-right:0;margin-left:0}
+}
+.two-players{margin-top:1.5rem;margin-bottom:1.5rem}
+.realms-hero-container{flex:initial}
+.minecon-page-component .js-media-block__particle-system{left:0;top:0}
+.text-generic ol{list-style-type:decimal}
+.page-header h1,h2{padding-top:initial}
+.footer{padding:0;margin-top:-1px}
+.sales-counter .justify-content-center{position:static}
+@media(max-width:698px){.sales-counter .justify-content-center>img{width:100%}
+}
+.what-is-minecraft .half-page-img-col{background-size:cover;background-position:center}
+@media(max-width:767px){.media-block-img-holder{order:1}
+.media-block-text-holder{order:2;margin-top:1rem}
+#order1 .media-block-text-holder{order:1}
+#device-image-large .media-block-img-holder{display:none}
+.minecon-page-component .media-block-text-holder{padding-left:15px !important;padding-right:15px !important}
+}
+.what-is-minecraft .page-section-bg-image{background-size:cover;background-color:#5caee0 !important}
+@media(min-width:768px){.what-is-minecraft .page-section-bg-image{background-position:right center}
+}
+.pricing-container a.card .ten-players{margin-top:-22.5px}
+.flex1{flex:1 !important}
+#pufferfish .offset-md-1{margin-left:0 !important}
+.modal-backdrop{display:none}
+.modal.show+.modal-backdrop{display:block;opacity:.5}
+#downloadhelp{background-size:cover}
+.mojang-footer .nav-pills>li>a{padding:2px 0 2px 0;margin:0}
+#faq ul{list-style:circle}
+.update-aquatic-page #bgimage{background-size:contain;background-repeat:no-repeat;background-position:center}
+.update-aquatic-text-30{margin-bottom:-30px}
+.cta__link-bg-vr{background-image:linear-gradient(#3f00ff,#1a02a1)}
+.cta__link-bg-vr:hover{background-image:linear-gradient(#303030,#000)}
+.vertical-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.article-container .article-content--image{margin-top:5px !important;margin-bottom:0 !important}
+.article-container .new{margin:0 !important;height:0 !important}
+.article-container .article-social{padding-bottom:5.5em !important}
+.store-block-media-image-holder{padding-left:0 !important;padding-right:0 !important}
+.article-image-carousel__caption a{text-decoration:underline}
+.article-image-carousel__caption a:hover{color:#fff;background-color:#000;text-decoration:none}
+.ms-links__link--align{display:flex;align-items:center}
+@media(min-width:768px) and (max-width:1024px){.update-aquatic-page .dynamic-promotions__secondary-option{display:none}
+}
+@media(max-width:768px){.update-aquatic-page .dynamic-promotions__secondary-option{display:none}
+}
+.text-cta{margin-bottom:15px}
+@media(max-width:768px){.media-block-text-holder{padding-left:0 !important;padding-right:0 !important}
+.media-block-img-holder{padding:0}
+.media-block__image-column{margin-top:30px !important}
+}
+.update-aquatic-page .media-block-text-holder{padding-left:0 !important;padding-right:0 !important}
+.slick-slide-carousel{width:610px;display:none}
+.ms--locale-text_align{margin-left:9.5px;margin-bottom:1px}
+.border-white-25{border-color:rgba(255,255,255,0.25) !important}
+.border-width-4{border-width:4px !important}
+.wmc-cta a:last-child{margin-right:0 !important}
+@media only screen and (min-device-width :768px) and (max-device-width :1024px) and (orientation :landscape){.update-aquatic-page .grid li:last-child{grid-column:2 / span 1}
+}
+@media only screen and (min-device-width:1024px) and (max-device-height:1366px) and (-webkit-min-device-pixel-ratio:2) and (orientation:portrait){.update-aquatic-page .grid li:last-child{grid-column:2 / span 1}
+}
+#device-image-large .bg-wool-light{width:85% !important}
+#device-image-large .w-10{font-size:2.25rem !important;max-width:66.66% !important;text-align:center !important}
+@media only screen and (min-device-width :320px) and (max-device-width :415px){#device-image-large .w-10{font-size:1.6rem !important;max-width:100% !important;text-align:center !important}
+#support-section .container{padding-left:0 !important;padding-right:0 !important}
+}
+.top-align{margin-top:7px}
+.btn-size{height:66px}
+.mt-55{margin-top:55px !important}
+.ht-43{height:43%}
+#bingMap{width:740px !important;height:250px}
+.alert-success{position:sticky;width:80%;z-index:1000;top:0;left:calc(10%);display:none}
+.page-section table{width:100%;margin-bottom:1rem;background-color:transparent;border:0 !important}
+.page-section table th,.page-section table td{padding:.75rem;vertical-align:top;border-top:1px solid #d1cfce}
+.page-section table thead th{vertical-align:bottom;border-bottom:2px solid #d1cfce}
+.page-section table tbody+tbody{border-top:2px solid #d1cfce}
+.page-section table{background-color:#f1edec}

@@ -1,0 +1,46 @@
+.tooltip{position:absolute;z-index:1020;display:block;visibility:visible;padding:5px;font-size:11px;opacity:0;filter:alpha(opacity=0)}
+.tooltip.in{opacity:.8;filter:alpha(opacity=80)}
+.tooltip.top{margin-top:-2px}
+.tooltip.right{margin-left:2px}
+.tooltip.bottom{margin-top:2px}
+.tooltip.left{margin-left:-2px}
+.tooltip.top .tooltip-arrow{bottom:0;left:50%;margin-left:-5px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid #000}
+.tooltip.left .tooltip-arrow{top:50%;right:0;margin-top:-5px;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:5px solid #000}
+.tooltip.bottom .tooltip-arrow{top:0;left:50%;margin-left:-5px;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:5px solid #000}
+.tooltip.right .tooltip-arrow{top:50%;left:0;margin-top:-5px;border-top:5px solid transparent;border-bottom:5px solid transparent;border-right:5px solid #000}
+.tooltip-inner{max-width:200px;padding:3px 8px;color:#fff;text-decoration:none;background-color:#000;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}
+.hide{display:none}
+.show{display:block}
+.invisible{visibility:hidden}
+.example{display:none}
+.row{position:relative}
+#test,.page-header h1,h2{padding-top:40px}
+.footer{margin-top:45px;padding:35px 0 36px;border-top:1px solid #e5e5e5}
+table.docs{table-layout:fixed}
+table.docs th:nth-child(1){width:150px}
+table.docs th:nth-child(2){width:350px}
+body.dragging,body.dragging *{cursor:move !important}
+ol i.icon-move,ol.default li,ol.nav li,ol.nav li a,ol.nested_with_switch li,ol.serialization li,ol.simple_with_animation li{cursor:pointer}
+ol.vertical{margin:0 0 9px;min-height:10px}
+ol.vertical li{display:block;margin:5px;padding:5px;border:1px solid #ccc;color:#08c;background:#eee}
+ol.vertical li.placeholder{position:relative;margin:0;padding:0;border:0}
+ol.nav li.placeholder:before,ol.vertical li.placeholder:before{border:5px solid transparent;content:""}
+ol.vertical li.placeholder:before{position:absolute;width:0;height:0;margin-top:-5px;left:-5px;top:-4px;border-left-color:red;border-right:0}
+ol li.highlight{background:#333;color:#999}
+ol li.highlight i.icon-move{background-image:url(dependencies/img/glyphicons-halflings-white.png)}
+ol.nested_with_switch,ol.nested_with_switch ol{border:1px solid #eee}
+ol.nested_with_switch ol.active,ol.nested_with_switch.active{border:1px solid #333}
+ol.simple_with_animation{border:1px solid #999}
+ol.nav li.dragged{background-color:#2c2c2c}
+ol.nav li.placeholder{position:relative}
+ol.nav li.placeholder:before{position:absolute;width:0;height:0;border-top-color:red;top:-6px;margin-left:-5px;border-bottom:0}
+ol.nav ol.dropdown-menu li.placeholder:before{border:5px solid transparent;border-left-color:red;margin-top:-5px;margin-left:none;top:0;left:10px;border-right:0}
+ol.nav .divider-vertical{cursor:default}
+.dragged{position:absolute;top:0;opacity:.5;z-index:2000}
+.switch-container{display:block;margin-left:auto;margin-right:auto;width:80px}
+.sorted_head th,.sorted_table tr{cursor:pointer}
+.sorted_table tr.placeholder{display:block;background:red;position:relative;margin:0;padding:0;border:0}
+.sorted_table tr.placeholder:before{content:"";position:absolute;width:0;height:0;border:5px solid transparent;border-left-color:red;margin-top:-5px;left:-5px;border-right:0}
+.sorted_head th.placeholder{display:block;background:red;position:relative;width:0;height:0;margin:0;padding:0}
+.sorted_head th.placeholder:before{content:"";position:absolute;width:0;height:0;border:5px solid transparent;border-top-color:red;top:-6px;margin-left:-5px;border-bottom:0}
+.make-center{margin:0 auto}

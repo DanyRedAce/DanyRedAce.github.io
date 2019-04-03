@@ -4,8 +4,54 @@
 	<meta charset="utf-8">
 	<title>Maincra.net</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+		.parallax { 
+  			/* The image used */
+  			background-image: url("Minecraft-bg0.png");
+
+  			/* Set a specific height */
+  			height: 600px; 
+
+			/* Create the parallax scrolling effect */
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-color: #76B7F4;
+		}
+		.button {
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+			background-color: green;
+			display: inline-block;
+			border: none;
+			text-align: center;
+			font-size: 28px;
+			padding: 20px;
+			width: 200px;
+			transition: all 0.5s;
+			cursor: pointer;
+			padding-left: 200px; 
+		}
+
+		.image-steve {
+			margin-bottom: 100px;
+		}
+
+		.image-button {
+			margin-left: 100px;
+
+		}
+	</style>
 </head>
-<body background="Minecraft-bg.jpg">
+<body>
+	<div class="parallax">
+
+		<div>
+			<img class="image-steve" src="steve-alex.png" >
+		</div>
+		<img class="image-button" src="button.png">
+	</div>
+	
 
 </body>
 </html>
