@@ -5,16 +5,35 @@
 	<title>Maincra.net</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<style>
+		.parallax_clouds { 
+  			/* The image used */
+  			background-image: url("bg-clouds.png");
+
+  			/* Set a specific height */
+  			height: 600px; 
+
+			/* Create the parallax scrolling effect */
+
+			z-index: 500px;
+			background-position: relative;
+            position: top;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-color: #76B7F4;
+			top: 100%;
+
+		}
 		.parallax { 
   			/* The image used */
+
   			background-image: url("Minecraft-bg0.png");
 
   			/* Set a specific height */
   			height: 600px; 
 
 			/* Create the parallax scrolling effect */
-			background-attachment: fixed;
-			background-position: center;
+
+			background-position: absolute;
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-color: #76B7F4;
@@ -34,24 +53,25 @@
 		}
 
 		.image-steve {
-			margin-bottom: 100px;
+;
 		}
 
 		.image-button {
-			margin-left: 100px;
+;
 
 		}
 	</style>
 </head>
 <body>
-	<div class="parallax">
-
-		<div>
-			<img class="image-steve" src="steve-alex.png" >
-		</div>
-		<img class="image-button" src="button.png">
-	</div>
 	
+	         <div class="parallax">
+			 <img src="steve-alex.png">
+		     	
+		     </div>
+		     		     <div class="parallax_clouds">
+		     </div>
 
+
+	
 </body>
 </html>

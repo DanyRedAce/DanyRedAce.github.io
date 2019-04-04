@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multi Parallax</title>
+	<style>
+				@import "compass/css3";
+
+		*{
+		  box-sizing: border-box;
+		}
+
+		html,
+		body{
+		  background-color: #76B7F4;
+		}
+
+		.parallax {
+		  perspective: 100px;
+		  height: 100vh;
+		  overflow-x: hidden;
+		  overflow-y: auto;
+;
+		  top: 0;
+		  left: 50%;
+		  right: 0;
+		  bottom: 0;
+		  margin-left: -1500px;
+		}
+
+		.parallax__layer{
+		  position: none;
+		  top: 0;
+		  right: 0;
+		  bottom: 0;
+		  left: 0;
+		  
+		  img{
+		    display: block;
+		    position: none;
+		    bottom: 0;
+		  }
+		}
+
+		.parallax__cover{
+		  background: white;
+		  display: block;
+		  position:none;
+		  top: 100%;
+		  left: 0;
+		  right: 0;
+		  height: 2000px;
+		  z-index: 2;
+		}
+
+		$parallax__layers: 3;
+
+		@for $i from 0 through $parallax__layers {
+		  $x: ($parallax__layers - $i) / 2;
+		  .parallax__layer__#{$i}{
+		     transform: translateZ(-100 * $x#{px}) scale($x + 1);
+		  }
+		}
+	</style>
+</head>
+<body>
+	<div class="parallax">
+    <div class="parallax__layer parallax__layer__1">
+        <img src="bg-clouds.png" />
+    </div>
+    <div class="parallax__layer parallax__layer__2">
+        <img src="Minecraft-bg0.png" />
+    </div>
+    <div class="parallax__layer parallax__layer__3">
+        <img src="steve-alex.png" />
+    </div>
+    <div class="parallax__cover"></div>
+</div>
+</body>
+</html>
