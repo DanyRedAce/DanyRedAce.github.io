@@ -5,7 +5,6 @@
   overflow-x: auto;
   overflow-y: auto;
   position: relative;
-  perspective-origin-x: 100%;
 }
 
 .parallax_group{
@@ -26,12 +25,12 @@
 
 .parallax_layer1 {
   transform: translateZ(0px) scale(1);
-  position: relative; 
+ 
   }
 
 .parallax_layer2 {
   transform: translateZ(-1px) scale(2);
-  position: relative; 
+
 
 }
 
