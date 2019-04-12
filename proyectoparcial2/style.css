@@ -39,9 +39,15 @@
 }
 
 .parallax_layer3 {
-  transform: translateZ(-1.86px) scale(2.85);
+  transform: translateZ(-2.5px) scale(3.5);
   height: 85vh;
   width: -10px;
+  }
+  .parallax_layer4 {
+  transform: translateZ(-0.99px) scale(2.3);
+  transform: translateY(500px);
+  transform: translateX(-800px);
+  margin-top: 230px;
   }
 
 .navbar {
@@ -66,4 +72,22 @@
   text-decoration: none;
   margin: 0;
 
+}
+
+.static {
+  position:absolute;
+  transform: translateX(-400px);
+  margin-top: 50px;
+}
+
+
+
+
+
+
+.ContentContainer {
+  position: relative;
+  background-color: white;
+  padding-left: 200px;
+  padding-right: 200px;
 }
